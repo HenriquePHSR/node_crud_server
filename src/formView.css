@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body {
+    font-family: 'Roboto';
+    box-sizing: border-box;
+    background: #EFF6FF;
+    animation: fade-move 1s;
+}
+
+form {
+    margin: auto;
+    max-width: 1080px;
+    font-family: 'Roboto';
+    border-color: white;
+    background: white;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+input[type=text], select, textarea {
+  font-family: 'Roboto';
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  font-family: 'Roboto';
+  background-color: #3B82F6;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit] {
+    font-weight: bolder;
+    color: white;
+}
+
+input[type=submit]:hover {
+  
+  font-weight: bolder;
+  color: white;
+  background-color: #93C5FD;
+}
+
+.container {
+  border-radius: 5px;
+  margin: 20px;
+  
+}
+
+
+@keyframes fade-move {
+    from {
+        opacity: 0;
+        /*
+        transform: scale(0.9);
+        transform: translateX(35%);
+        */
+        
+    } to {
+        opacity: 1;
+        /*
+        transform: (1);
+        transform: translateX(0%);
+        */
+        
+    }
+}

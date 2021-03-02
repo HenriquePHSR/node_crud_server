@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+html, body {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: #EFF6FF;
+}
+
+.container2-2 {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-columns: 50vh 50vh;
+    grid-template-rows: 80vh 20vh;
+    grid-template-areas: "greet form"
+                         "foot foot";
+    height: 100vh;
+    justify-content: center;
+    word-wrap: break-word;
+}
+
+.container1-2 {
+    display: grid;
+    grid-template-columns: 100vh;
+    grid-template-rows: 60vh 40vh;
+    grid-template-areas: "inner-form"
+                         "text";
+    grid-area: form;
+    word-wrap: break-word
+}
+
+.aside {
+    grid-area: greet;
+    align-self: center;
+}
+
+.aside > p {
+    font-weight:bolder;
+}
+
+.aside > .logo {
+    color: #1D4ED8;
+    font-size: 56px;
+    font-family:sans-serif;
+}
+
+footer {
+    grid-area: foot;
+    background: white;
+}
+
+.my-form1-4 {
+    word-wrap: break-word;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    display: flex;
+    margin-top: 30vh;
+    width: 20rem;
+    height: 15rem;
+    flex-direction: column;
+    grid-area: inner-form;
+    border-radius: 10px;
+    box-shadow: 0 0 0.9em #E5E7EB;
+    gap: 5px;
+}
+
+/*
+    GET a child from a tag:   tag .aClassName:nth-child(n)
+*/
+
+/* this block define the behavior of the animation */
+
+form {
+    animation: fade-move 1s;
+    /*
+    animation-delay: 250ms;
+    animation-fill-mode: backward; define behavior to when animation is not happens 
+                                   before or after the animation
+
+    */
+}
+
+/* this function the aniomation itself */
+@keyframes fade-move {
+    from {
+        opacity: 0;
+        /*
+        transform: scale(0.9);
+        */
+        transform: translateX(35%);
+    } to {
+        opacity: 1;
+        /*
+        transform: (1);
+        */
+        transform: translateX(0%);
+    }
+}
+
+.my-form1-4 > input {
+    font-size: medium;
+    font-family: 'Roboto';
+    color: rgb(0, 0, 0);
+    height: 25px;
+    border-radius: 5px;
+    /*border: 1px solid gray;*/
+    border: none;
+    background: #DBEAFE;
+}
+
+a {
+    text-decoration: none;
+    color: #1D4ED8;
+}
+
+.newAccount {
+    border-top-color: #6B7280;
+    border-top: 3px;
+}
+
+.newAccount > button > a {
+    color: #E5E7EB;
+}
+
+button {
+    margin: 10px;
+    color: #F9FAFB;
+    font-weight: bolder;
+    width: 15rem;
+    height: 4vh;
+    background: #3B82F6;
+    border-radius: 5px;
+    border: none;
+}
+
+
+button:hover {
+    background: #93C5FD;
+    outline:none;
+}
+
+input:focus {
+    font-size: medium;
+    font-family: 'Roboto';
+    outline-color: #3B82F6;
+}
+
+footer {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.newAccount > button {
+    color: white;
+}

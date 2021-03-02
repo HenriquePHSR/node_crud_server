@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+html {
+    font-family: 'Roboto';
+    margin: 0;
+    justify-content: center;
+    align-content: center;
+}
+
+body {
+    height: 50rem;
+    background: #EFF6FF;
+}
+/*
+.back-decal {
+    
+    background: #6B7280;
+    width: 100vw;
+    height: 40vh;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 0 1.0em #9CA3AF;
+    
+}
+*/
+.main-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 40%;/* 30% 20%; */
+    grid-template-areas: "profile-top"
+                         "notice-text";
+                         /*"photos-tile"
+                         "foot-tile";*/
+
+    border-radius: 30px;
+    background: white;
+
+    margin: auto;
+    max-width: 1080px;
+    min-width: 1000px;
+    width: 80vw;
+    height: 45rem;
+    box-shadow: 0 0 0.9em #E5E7EB;
+}
+
+.profile-top {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 80% 20%;
+    grid-template-areas: "profile-photo profile-detail"
+                         "profile-btn profile-btn";
+
+    grid-area: profile-top;
+}
+
+.profile-photo {
+
+    grid-area: profile-photo;
+    box-sizing:border-box;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    border-radius: 30px;
+}
+
+.profile-btn {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+
+    grid-area: profile-btn;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.profile-btn > button {
+    width: 60%;
+    height: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: #F9FAFB;
+    font-weight: bolder;
+    background: #3B82F6;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 0.5em #9CA3AF;
+}
+
+.profile-btn > .edit-w {
+    background: white;
+    color: #9CA3AF;
+}
+
+.profile-btn > .edit-w:hover {
+    background: #E5E7EB;
+}
+
+
+button:hover {
+    background: #93C5FD;
+    outline:none;
+}
+
+.notice-text {
+    font-size: 48px;
+    margin-right: auto;
+    margin-left: 10%;
+    margin-top: auto;
+
+    width: 80%;
+    height: 80%;
+    justify-items: center;
+    align-items: center;
+}
+
+.profile-detail {
+    font-size: 24px;
+    margin-left: 5%;
+}
+
+.my-photo {
+    box-sizing: border-box;
+    align-self: center;
+    justify-self: center;
+
+    border-radius: 30px;
+}
+
+.main-container {
+    animation: fade-move 1s;
+    /*
+    animation-delay: 250ms;
+    animation-fill-mode: backward; define behavior to when animation is not happens 
+                                   before or after the animation
+
+    */
+}
+
+/* this function the aniomation itself */
+@keyframes fade-move {
+    from {
+        opacity: 0;
+        /*
+        transform: scale(0.9);
+        transform: translateX(35%);
+        */
+        
+    } to {
+        opacity: 1;
+        /*
+        transform: (1);
+        transform: translateX(0%);
+        */
+        
+    }
+}
+
+.logo {
+    color: #1F2937;
+    font-size: 56px;
+    font-family:sans-serif;
+    font-weight: bolder;
+}
